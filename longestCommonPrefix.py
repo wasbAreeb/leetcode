@@ -1,15 +1,17 @@
 
-strs = ["flower","flow","flight"]
-strs = sorted(strs, key=len)
+# 24/12/2025
 
-c_string = ""
-for i in range(len(strs[0])):
-    char = strs[0][i]
-    for s in strs[1:]:
-        if char != s[i]:
-            print(c_string)
-            exit()
-    c_string += char
+def main(str):
+    strs = sorted(strs, key=len)
 
-print(c_string)
+    c_string = ""
+    for i in range(len(strs[0])):
+        char = strs[0][i]
+        for s in strs[1:]:
+            if char != s[i]:
+                return c_string
+                exit()
+        c_string += char
+
+    return c_string
 
